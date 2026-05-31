@@ -391,6 +391,20 @@ tbody td strong{color:var(--navy);font-weight:700;}
 .tg-down{display:block;width:0;height:0;margin:0 auto 11px;border-left:7px solid transparent;border-right:7px solid transparent;border-top:9px solid var(--navy);}
 .tg-result{font-family:var(--serif);font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.45;}
 
+/* concept diagrams — mobile: stack vertically */
+@media (max-width:560px){
+  .sh-row{flex-direction:column;}
+  .sh-box{width:100%;}
+  .sh-arrow{flex:none;width:100%;flex-direction:column;padding:13px 0;gap:5px;}
+  .sh-line{width:2px;height:26px;background:linear-gradient(180deg,var(--muted-2),var(--gold));}
+  .sh-line::after{top:auto;bottom:-1px;right:50%;transform:translateX(50%);border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid var(--gold);border-bottom:none;}
+  .fw-loop{flex-direction:column;}
+  .fw-node{width:100%;min-width:0;}
+  .fw-arrow{width:100%;height:22px;}
+  .fw-arrow::before{top:4px;bottom:4px;left:50%;right:auto;width:2px;height:auto;background:linear-gradient(180deg,var(--gold),var(--gold-soft));}
+  .fw-arrow::after{top:auto;bottom:5px;left:50%;right:auto;transform:translateX(-50%) rotate(135deg);}
+}
+
 /* --- viz refinement pass (premium polish) --- */
 .vz-donut-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;padding:6px 0 2px;}
 .vz-donut-wrap svg.vz{max-width:226px;}
